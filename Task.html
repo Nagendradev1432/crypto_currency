@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        #loginForm, #signupForm, #settingsForm {
+            display: none; 
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #ecb8bd; 
+            border: 1px solid #efe3e4; 
+            color: #272929; 
+            padding: 20px;
+            z-index: 1000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1{
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding: 20px 50px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Coins: <b>14,898</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Exchanges: <b>1,135</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Market Cap: <b>$2.444T</b></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  crypto Cryptocurrency
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">crypto currency</a></li>
+                  <li><a class="dropdown-item" href="#">Market cap</a></li>
+                  <li><a class="dropdown-item" href="#">Bit coins</a></li>
+                  <li><a class="dropdown-item" href="#">Exchanges</a></li>
+                </ul>
+              </li>
+              <p style="color: red; margin-top: 10px;">2.0%</p>
+            </ul>
+
+            <form class="d-flex" role="search" style="gap: 20px;">
+                <button class="btn btn-outline-success" type="button" onclick="showSettingsForm()"><img src="https://www.svgrepo.com/show/520935/setting-5.svg" alt="" style="width:30px"></button>
+                <button class="btn btn-outline-success" type="button" onclick="showSignupForm()">Signup</button>
+              <button class="btn btn-outline-success" type="button" onclick="showLoginForm()" style="background-color: green;color: white;">Login</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+   
+      <div id="loginForm" class="container-fluid">
+        <h4 class="alert-heading">Login</h4>
+        <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='Task2.html'">Submit</button>
+
+
+        </form>
+      </div>
+
+      <div id="signupForm" class="container-fluid">
+        <h4 class="alert-heading">Signup</h4>
+        <form>
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+   
+      <div id="settingsForm" class="container-fluid">
+        <h4 class="alert-heading">Settings</h4>
+        <li><a class="dropdown-item" href="#">crypto currency</a></li>
+        <li><a class="dropdown-item" href="#">Market cap</a></li>
+        <li><a class="dropdown-item" href="#">Bit coins</a></li>
+        <li><a class="dropdown-item" href="#">Exchanges</a></li>
+        <li><a class="dropdown-item" href="#">crypto currency</a></li>
+        <li><a class="dropdown-item" href="#">Market cap</a></li>
+        <li><a class="dropdown-item" href="#">Bit coins</a></li>
+        <li><a class="dropdown-item" href="#">Exchanges</a></li>
+       
+      </div>
+
+     <div style="display:flex ;gap: 30px;padding: 20px 50px;">
+      <div>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.SncTKJANCkBopi3m_swUfAHaEK&pid=Api&P=0&h=180" style="width: 120px;"   alt="">
+      </div>
+      <div>
+        <p style="margin-top: 20px;">Cryptocurrencies</p>
+      </div>
+      <div>
+        <p style="margin-top: 20px;">Exchanges</p>
+      </div>
+      <div>
+        <p style="margin-top: 20px;">Net</p>
+      </div>
+      <div>
+        <p style="margin-top: 20px;">Learn</p>
+      </div>
+      <div>
+        <p style="margin-top: 20px;">Products
+        </p>
+      </div>
+     </div>
+     <div style="padding: 20px 30px;">
+      <div>
+      <h1>Global Cryptocurrency Market Cap Charts</h1>
+    </div>
+    <div>
+      <p>The global cryptocurrency market cap today is $2.45 Trillion, a -1.47% change in the last 24 hours and 110.64% change one year ago. As of today, the market cap of Bitcoin (BTC) is at $1.35 Trillion, representing a Bitcoin dominance of 55.07%. Meanwhile, Stablecoins' market cap is at $174 Billion and has a 7.09% share of the total crypto market cap.</p>
+    </div>
+     </div>
+
+     <div>
+      <div style="display:flex ;gap: 20px;padding: 20px 40px;">
+        <div>
+          <div>
+        <h1 style="font-weight: 800;">Comprehensive & <br>Powerful.
+          Meet CoinGecko's <br>Crypto App.</h1>
+          <div>
+          <p>Largest collection of unbiased crypto <br>market data, actionable insights, news, tools, <br>and more in one place.
+
+            Best of all? Free.
+            
+            Get the CoinGecko app from the app stores, <br>scan the QR code, or download the .apk file.</p>
+          </div>
+          <div>
+            <img src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg"  style="width: 150px;"
+            alt="">
+            
+          </div>
+          <div>
+            <img src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg"  style="width: 150px;margin-top: 20px;" alt="">
+          </div>
+        </div>  
+        </div>
+
+        <div style="display: flex;">
+          <div>
+            <div>
+            <img src="https://static.coingecko.com/s/landing_pages/mobile/1_landing-ee45e2e2bcfdcd068bb5d5b4160ca76edb76174e4d77538f8f0fe907b0bbc993.png" style="width: 700px;" alt="">
+            
+          </div>
+    
+            
+          </div>
+          
+     
+        </div>
+     </div>
+<div style="padding: 40px 30px;text-align: center;">
+  <div>
+    <h1 style="font-weight: 800;">The Crypto World is in your hands</h1>
+    <p>Over 14,000+ Cryptocurrencies tracked across 1,000+ crypto exchanges worldwide.</p>
+  </div>
+ 
+</div>
+
+<div style="display: flex; gap: 70px;padding: 30px 40px;">
+  <div>
+    <img src="https://static.coingecko.com/s/landing_pages/mobile/2_coin-c108afe278517e5183d7d3cd2d63148ede6c9a35b63fd8871fe24252975ff5b0.png" style="
+      width: 700px;" alt="">
+  </div>
+  <div style="margin-top: 40px;">
+    <h1>Industry-trusted Crypto Prices</h1>
+    <p>Stay ahead of the competition.
+
+      Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trusted data.
+      
+      See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto
+      Stay ahead of the competition.
+
+      Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trusted data.
+      
+      See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto.</p>
+  </div>
+
+</div>
+<div style="display: flex; gap: 70px;padding: 100px 40px;">
+  <div>
+  <h1 style="font-weight: 800;">Exchange Ranking with Trust Score</h1>
+  <p>Be in the know.
+
+    Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto.
+    Stay ahead of the competition.
+
+    Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trusted data.
+    
+    See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto
+    Stay ahead of the competition.
+
+    Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trus</p>
+  </div>
+  <div>
+    <img src="https://static.coingecko.com/s/landing_pages/mobile/3_exchanges-8df7f3dd9057971d73063cb5fc1386b75cb9572b21a2bac382d7872ea3cbb059.png" style="width: 700px;" alt="">
+   
+  </div>
+
+</div>
+<div style="display: flex; gap: 70px;padding: 100px 40px;">
+  <div>
+  <img src="https://static.coingecko.com/s/landing_pages/mobile/4_price_alerts-c55e6d354df842066ae44d9696365287e2bfd9459485f35b944d39e77a8665a1.png"  style="width: 700px;" alt="">
+  </div>
+  <div>
+   <h1 style="font-weight: 800;">Customizable Price Alerts</h1>
+   <p>Let what's important come to you.
+
+    Set once-off or recurring alerts for any and all cryptocurrencies on CoinGecko. Be notified when the coin hits your set target price, with support for over 50 currencies. Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trusted data.
+    
+    See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto
+    Stay ahead of the competition.
+
+    Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trus</p>
+   
+  </div>
+
+</div>
+
+<div style="display: flex; gap: 70px;padding: 100px 40px;">
+  <div>
+ <h1 style="font-weight: 800;">Portfolio On The Go</h1>
+ <p>Your Portfolio. Anywhere.
+
+  Let us do the heavy lifting - Well track live prices and profit & losses of your trades for over 14,000+ cryptocurrencies tracked across 1,000+ exchanges. Customize it further with over 50+ supported currency options.  
+  See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto
+  Stay ahead of the competition.
+
+  Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trus</p>
+  </div>
+  <div>
+   <img src="https://static.coingecko.com/s/landing_pages/mobile/5_portfolio-854b1e34cd0661c9cb5b8f201715a564ccd741967dde8cc777bd9044be004552.png" style="width: 700px;" alt="">
+   
+  </div>
+
+</div>
+<div style="display: flex; gap: 70px;padding: 100px 40px;">
+  <div>
+ <img src="https://static.coingecko.com/s/landing_pages/mobile/6_widgets-ba191de30c076268f5a4fd95b3d63759bf6c43c99b09a906c9ba632f5178c140.png" style="width: 700px;" alt="">
+  </div>
+  <div>
+  <h1 style="font-weight: 800px;">Personalize With Widgets.</h1>
+  <p>Your homescreen never looked better.
+
+    Vital market information at a glance through our Crypto Coin, Top 10 & Portfolio widgets across all devices - Android and iOS alike.
+    Let us do the heavy lifting - Well track live prices and profit & losses of your trades for over 14,000+ cryptocurrencies tracked across 1,000+ exchanges. Customize it further with over 50+ supported currency options.  
+    See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto
+    Stay ahead of the competition.
+  
+    Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-tru
+  </p>
+   
+  </div>
+
+</div>
+<div style="display: flex; gap: 70px;padding: 100px 40px;">
+  <div>
+    <h1 style="font-weight: 800;">Explore - News, Trends, Guides & More.</h1>
+    <p>Never miss a beat.
+
+      Stay up to date with the latest news and never miss a beat. Get relevant coverage from leading crypto media outlets, learn about blockchain or receive updates directly from crypto teams.
+      Let us do the heavy lifting - Well track live prices and profit & losses of your trades for over 14,000+ cryptocurrencies tracked across 1,000+ exchanges. Customize it further with over 50+ supported currency options.  
+  See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto
+  Stay ahead of the competition.
+
+  Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trus</p>
+  </div>
+  <div>
+    <img src="https://static.coingecko.com/s/landing_pages/mobile/7_news-ed69e2173b039eba2cad852cfc8d912dc845f5648212932882c86b1354ecab8c.png" style="width: 700px;" alt="">
+   
+  </div>
+
+</div>
+<div style="display: flex; gap: 70px;padding: 100px 40px;">
+  <div>
+   <img src="https://static.coingecko.com/s/landing_pages/mobile/8_currency-d052cb06f5a7a8ac2ee0a55067536ed048e228d1c39cab541407905723054654.png" style="width: 700px;" alt="">
+  </div>
+  <div>
+   <h1 style="font-weight: 800;">Calculate & Convert in Your Language.</h1>
+   <p>Usable whenever, wherever.
+
+    Convert between crypto and fiat seamlessly. Wherever you may be in the world, we got you covered!
+    
+    Over 50+ currencies and 25 languages available to choose from for the most comprehensive and practical uses.
+    See for yourself why our data is preferred by and powers Trezor, Ledger, Etherscan, Trust Wallet, Metamask and over hundreds other leading crypto platforms.Follow CoinGecko’s proprietary Trust Score ranked crypto exchange list for trusted exchanges based on liquidity, scale of operations and technical coverage. Over 1,000+ exchanges for you to look for the next best exchange to trade your crypto
+    Stay ahead of the competition.
+  
+    Invested? Interested in Crypto? Stay updated with the markets using the ultimate crypto app powered by our live, industry-trus</p>
+   
+  </div>
+
+</div>
+
+<div style="text-align: center;padding: 20px 30px;">
+  <h1 style="font-weight: 800;">Made by Crypto Users, For Crypto Users</h1>
+  <p>Get the CoinGecko app from the app stores, scan the QR code, or download the .apk file.</p>
+</div>
+<div style="display: flex; gap: 40px;padding: 100px 40px;text-align: center;margin-left: 510px;margin-top: -100px;">
+  <div>
+   <img src="https://static.coingecko.com/s/landing_pages/mobile_app_qr_code-503a3393ccc355a8c41ea1a4026c31db469665b66c47847b347e2447c80feea3.svg" alt="">
+  </div>
+  <div>
+  <img src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg" style="width: 100px;" alt="">
+  <br><br><img src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg" style="width: 100px;" alt="">
+  </div>
+
+</div>
+
+<div style="display: flex; gap: 30px;padding: 100px 30px;">
+  <div>
+   <img src="https://tse3.mm.bing.net/th?id=OIP.SncTKJANCkBopi3m_swUfAHaEK&pid=Api&P=0&h=180"  alt="">
+   <p>CoinGecko provides a fundamental analysis<br> of the crypto market. In addition to tracking price, <br>volume and market capitalisation, CoinGecko tracks community<br> growth, open-source code development,<br> major events and on-chain metrics.</p>
+  </div>
+  <div>
+    <h1>Resources</h1>
+    <p>Crypto News
+     <br><br> Bitcoin Treasury
+      <br><br>Crypto Heatmap
+      <br><br>Crypto API
+     <br><br> Donations
+      <br><br>Bitcoin
+      <br><br>Ethereum</p>
+  
+  </div>
+  <div>
+    <h1>Support</h1>
+    <p>Request Form
+     <br><br> Advertising
+      <br><br>Candy Rewards Listing
+      <br><br>Help Center
+      <br><br>Bug Bounty
+      <br><br>FAQ</p>
+  </div>
+<div>
+  <h1>About CoinGecko</h1>
+  <p>About Us
+    <br><br>Careers 
+    <br><br>Join Us
+    <br><br>Company Blog
+    <br><br>Branding Guide
+    <br><br>Methodology
+    <br><br>Disclaimer
+    <br><br>Terms of Service
+    <br><br>Privacy Policy
+    <br><br>Ad Policy
+    <br><br>Cookie Preferences</p>
+</div>
+<div>
+  <h1>Community</h1>
+  <p>X/Twitter
+    <br><br>Telegram Chat
+    <br><br>Telegram News
+    <br><br>Instagram
+    <br><br>Reddit
+    <br><br>Discord
+   <br><br> Facebook
+    <br><br>Youtube
+    <br><br>TikTok
+    </p>
+</div>
+</div>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Interested to stay<br> up-to-date <br>with cryptocurrencies?
+      Get the latest crypto news, <br>updates, and reports by <br>subscribing to<br> our free newsletter.</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="enter a mail" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Subscribe</button>
+    </form>
+  </div>
+</nav>
+    <script>
+        function showLoginForm() {
+            hideForms(); 
+            const loginForm = document.getElementById('loginForm');
+            loginForm.style.display = 'block'; 
+        }
+
+        function showSignupForm() {
+            hideForms(); 
+            const signupForm = document.getElementById('signupForm');
+            signupForm.style.display = 'block'; 
+        }
+
+        function showSettingsForm() {
+            hideForms(); 
+            const settingsForm = document.getElementById('settingsForm');
+            settingsForm.style.display = 'block'; 
+        }
+
+        function hideForms() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('settingsForm').style.display = 'none';
+        }
+
+    </script>
+</body>
+</html>
